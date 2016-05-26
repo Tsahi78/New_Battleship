@@ -62,6 +62,7 @@ namespace Battleship
                 }
             }
         }
+        public Boolean set_ship(string ship_name,Point)
     }
     
 }
