@@ -17,11 +17,11 @@ namespace Battleship
        private Point[] point;
 
     
-       public Ships(string name, int size, Boolean sink, Boolean horizontal, Point[] point)
+       public Ships(string name, int size,  Boolean horizontal, Point[] point)
         {
             this.name = name;
             this.size = size;
-            this.sink = sink;
+            this.sink = false;
             this.horizontal = horizontal;
             this.point = point;
         }

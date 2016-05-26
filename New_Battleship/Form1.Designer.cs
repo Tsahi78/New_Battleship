@@ -33,7 +33,7 @@
             this.AutoButton = new System.Windows.Forms.Button();
             this.Normalbutton = new System.Windows.Forms.Button();
             this.Horizontal = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.SelectShip = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // StartButton
@@ -73,6 +73,7 @@
             this.Normalbutton.TabIndex = 3;
             this.Normalbutton.Text = "הכנס ידני";
             this.Normalbutton.UseVisualStyleBackColor = true;
+            this.Normalbutton.Click += new System.EventHandler(this.Normalbutton_Click);
             // 
             // Horizontal
             // 
@@ -85,20 +86,20 @@
             this.Horizontal.Size = new System.Drawing.Size(121, 21);
             this.Horizontal.TabIndex = 4;
             // 
-            // comboBox2
+            // SelectShip
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(403, 158);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 5;
+            this.SelectShip.FormattingEnabled = true;
+            this.SelectShip.Location = new System.Drawing.Point(403, 158);
+            this.SelectShip.Name = "SelectShip";
+            this.SelectShip.Size = new System.Drawing.Size(121, 21);
+            this.SelectShip.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 447);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.SelectShip);
             this.Controls.Add(this.Horizontal);
             this.Controls.Add(this.Normalbutton);
             this.Controls.Add(this.AutoButton);
@@ -118,7 +119,7 @@
         private System.Windows.Forms.Button AutoButton;
         private System.Windows.Forms.Button Normalbutton;
         private System.Windows.Forms.ComboBox Horizontal;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox SelectShip;
     }
 }
 

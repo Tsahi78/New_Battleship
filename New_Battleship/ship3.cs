@@ -9,10 +9,10 @@ namespace Battleship
 {
     class ship3:Ships
     {
-        private string name = "battel3";
-        private int size = 3;
+       
 
-        public ship3(String name = "battel3", int size = 3, Boolean horizontal, Point[] point) : base(name, size,  horizontal,  point) { }
-    
+        public ship3( Boolean horizontal, Point[] point) : base("ship3",3, horizontal,  point) {
+           
+        }
     }
 }

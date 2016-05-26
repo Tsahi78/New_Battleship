@@ -71,13 +71,34 @@ namespace Battleship
             new_game();
         }
         private void new_game(){
-
-            InitialPictureBox();
+            Horizontal.Visible = false;
+            SelectShip.Visible = false;
+            AutoButton.Visible = true;
+            Normalbutton.Visible = true;
+            StartButton.Visible = false;
         }
 
         private void StartButton_Click(object sender, EventArgs e)
         {
             InitialPictureBox();
+        }
+
+        private void Normalbutton_Click(object sender, EventArgs e)
+        {
+            InitialPictureBox();
+            Horizontal.Visible = true;
+            SelectShip.Visible = true;
+
+            SelectShip.DisplayMember = "Text";
+            SelectShip.ValueMember = "Value";
+
+            var items = new[] { 
+    new { Text = "ship2", Value = "1" }, 
+    new { Text = "ship3", Value = "2" }, 
+  
+       };
+
+            SelectShip.DataSource = items;
         }
     }
 }
