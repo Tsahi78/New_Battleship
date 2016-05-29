@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-
+using System.Collections;
 namespace Battleship
 {
     class Player 
@@ -13,9 +13,9 @@ namespace Battleship
         private string name;
 
 
-        List<Ships> ships;
-        List<Point> new_point;
-        List<Point> old_point;
+        List<Ships> ships= new List<Ships>();
+        List<Point> new_point = new List<Point>();
+        List<Ships> old_ships= new List<Ships>();
 
         internal List<Ships> Ships
         {
@@ -41,22 +41,26 @@ namespace Battleship
               get { return new_point; }
               set { new_point = value; }
             }
-        public List<Point> Old_point
+        public List<Ships> Old_ships
             {
-              get { return old_point; }
-              set { old_point = value; }
+              get { return old_ships; }
+              set { old_ships = value; }
             }
 
         //אתחול של רשימה של נקודות 
 
         public void set_new_point(int x, int y)
         {
-            for (int i = 0; i < y; i++)
+            new_point = new List<Point>();
+            for (int i = 0; i < x; i++)
             {
 
-                for (int j = 0; j < x; j++)
+                for (int j = 0; j < y; j++)
                 {
-                    new_point.Add(new Point(j, i));
+                    Point a = new Point(i, j);
+    
+                    new_point.Add(a);
+                   
                 }
             }
         }
@@ -85,38 +89,96 @@ namespace Battleship
             {
                 int x = ship.Point[i].X;
                 int y = ship.Point[i].Y;
-                if (new_point.Contains(xy=new Point(y-1,x-1)))
+              
+                if (new_point.Contains(xy=new Point(x-1,y-1)))
                 {
                     new_point.Remove(xy);
+             
                 }
-                if (new_point.Contains(xy = new Point(y-1 ,x)))
+                if (new_point.Contains(xy = new Point(x ,y-1)))
                 {
                     new_point.Remove(xy);
+                 
                 }
-                if (new_point.Contains(xy = new Point(y - 1,x + 1 )))
+                if (new_point.Contains(xy = new Point(x+1,y- 1 )))
                 {
                     new_point.Remove(xy);
+                   
                 }
-                if (new_point.Contains(xy = new Point(y ,x - 1 )))
+                if (new_point.Contains(xy = new Point(x-1 ,y )))
                 {
                     new_point.Remove(xy);
+                 
                 }
-                if (new_point.Contains(xy = new Point(y+1, x - 1)))
+                if (new_point.Contains(xy = new Point(x-1,y+1)))
                 {
                     new_point.Remove(xy);
+                 
                 }
-                if (new_point.Contains(xy = new Point(y , x + 1)))
+                if (new_point.Contains(xy = new Point(x + 1, y)))
                 {
                     new_point.Remove(xy);
-
-                if (new_point.Contains(xy = new Point(y+1,x)))
+                 
+                }
+                if (new_point.Contains(xy = new Point(x+1,y+1)))
                     {
                         new_point.Remove(xy);
+                  
                     }
+                if (new_point.Contains(xy = new Point(x, y+1)))
+                {
+                    new_point.Remove(xy);
+                   
                 }
+                
 
             }
             return true;
+        }
+        public void get_rendom_point()
+        {
+            Random a = new Random();
+            Ships ship=null;
+            do
+            {
+                Point rendom_point = new_point[a.Next(0, new_point.Count)];
+                Boolean rendom_boolean = a.Next(0, 100) > 50 ? true : false;
+                 Point[] points  = ship2.get_point(rendom_point.X, rendom_point.Y, rendom_boolean);
+                ship= new ship2(rendom_boolean,points);
+                
+            } while (!this.set_ship(ship));
+            this.ships.Add(ship);
+             ship = null;
+            do
+            {
+                Point rendom_point = new_point[a.Next(0, new_point.Count)];
+                Boolean rendom_boolean = a.Next(0, 100) > 50 ? true : false;
+                Point[] points = ship3.get_point(rendom_point.X, rendom_point.Y, rendom_boolean);
+                ship = new ship3(rendom_boolean, points);
+
+            } while (!this.set_ship(ship));
+            this.ships.Add(ship);
+            ship = null;
+            do
+            {
+                Point rendom_point = new_point[a.Next(0, new_point.Count)];
+                Boolean rendom_boolean = a.Next(0, 100) > 50 ? true : false;
+                Point[] points = ship6.get_point(rendom_point.X, rendom_point.Y, rendom_boolean);
+                ship = new ship6(rendom_boolean, points);
+
+            } while (!this.set_ship(ship));
+            this.ships.Add(ship);
+            ship = null;
+            do
+            {
+                Point rendom_point = new_point[a.Next(0, new_point.Count)];
+                Boolean rendom_boolean = a.Next(0, 100) > 50 ? true : false;
+                Point[] points = ship4.get_point(rendom_point.X, rendom_point.Y, rendom_boolean);
+                ship = new ship4(rendom_boolean, points);
+
+            } while (!this.set_ship(ship));
+            this.ships.Add(ship);
+
         }
     }
     

@@ -7,3 +7,12 @@ c:\users\tsahi\documents\visual studio 2013\Projects\New_Battleship\New_Battlesh
 c:\users\tsahi\documents\visual studio 2013\Projects\New_Battleship\New_Battleship\bin\Debug\New_Battleship.pdb
 c:\users\tsahi\documents\visual studio 2013\Projects\New_Battleship\New_Battleship\obj\Debug\New_Battleship.exe
 c:\users\tsahi\documents\visual studio 2013\Projects\New_Battleship\New_Battleship\obj\Debug\New_Battleship.pdb
+C:\Users\eizik skitel\Documents\Visual Studio 2013\Projects\New_Battleship\New_Battleship\bin\Debug\New_Battleship.exe.config
+C:\Users\eizik skitel\Documents\Visual Studio 2013\Projects\New_Battleship\New_Battleship\obj\Debug\New_Battleship.exe
+C:\Users\eizik skitel\Documents\Visual Studio 2013\Projects\New_Battleship\New_Battleship\obj\Debug\New_Battleship.pdb
+C:\Users\eizik skitel\Documents\Visual Studio 2013\Projects\New_Battleship\New_Battleship\bin\Debug\New_Battleship.exe
+C:\Users\eizik skitel\Documents\Visual Studio 2013\Projects\New_Battleship\New_Battleship\bin\Debug\New_Battleship.pdb
+C:\Users\eizik skitel\Documents\Visual Studio 2013\Projects\New_Battleship\New_Battleship\obj\Debug\New_Battleship.csprojResolveAssemblyReference.cache
+C:\Users\eizik skitel\Documents\Visual Studio 2013\Projects\New_Battleship\New_Battleship\obj\Debug\Battleship.Form1.resources
+C:\Users\eizik skitel\Documents\Visual Studio 2013\Projects\New_Battleship\New_Battleship\obj\Debug\New_Battleship.Properties.Resources.resources
+C:\Users\eizik skitel\Documents\Visual Studio 2013\Projects\New_Battleship\New_Battleship\obj\Debug\New_Battleship.csproj.GenerateResource.Cache

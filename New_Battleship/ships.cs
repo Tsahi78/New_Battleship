@@ -8,13 +8,20 @@ using System.Drawing;
 namespace Battleship
 {
     
-    class Ships
+    abstract class Ships
     {
        private string name;
        private int size;
        private Boolean sink;
-       private Boolean horizontal = false;
+       private Boolean horizontal;
        private Point[] point;
+       private Boolean[] hit_point;
+
+       public Boolean[] Hit_point
+       {
+           get { return hit_point; }
+           set { hit_point = value; }
+       }
 
     
        public Ships(string name, int size,  Boolean horizontal, Point[] point)
@@ -24,11 +31,14 @@ namespace Battleship
             this.sink = false;
             this.horizontal = horizontal;
             this.point = point;
+            hit_point = new Boolean[size];
+            Array.Clear(hit_point, 0, hit_point.Length);
         }
 
-        public Ships()
+       public Ships(string name, int size)
         {
-
+            this.name = name;
+            this.size = size;
         }
 
         public string Name
@@ -60,7 +70,7 @@ namespace Battleship
             set { point = value; }
         }
 
-       
+        public abstract Boolean hit_is_sink(Point a);
 
 
         public override string ToString()
